@@ -2,6 +2,7 @@ package pholcus_list
 
 // 基础包
 import (
+	"strings"
 	// "github.com/henrylee2cn/pholcus/common/goquery"                          //DOM解析
 	"github.com/henrylee2cn/pholcus/app/downloader/request" //必需
 	. "github.com/henrylee2cn/pholcus/app/spider"           //必需
@@ -63,7 +64,10 @@ var FileTest = &Spider{
 						//大小
 						appSize := s.Find(".size").Text()
 						//下载量
-						appDownload := s.Find(".download").Text()
+						longS := s.Find(".download").Text()
+						longS = longS[2 : end-1]
+						appDownload := strings.Trim(longS, " ")
+
 						//链接
 						url, _ := s.Find(".app-info-desc a").Attr("href")
 
