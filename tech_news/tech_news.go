@@ -78,13 +78,13 @@ var FileTest = &Spider{
 					newList := query.Find(".newestArticleList li")
 					newList.Each(func(i int, s *goquery.Selection) {
 						//标题
-						newsTitle := s.Find("div[class=text fl]>a").Attr("title")
+						newsTitle, _ := s.Find("div[class=text fl]>a").Attr("title")
 						//作者
 						newsAuthor := s.Find(".name").Text()
 						//时间
 						newsTime := s.Find(".time").Text()
 						//链接
-						url := s.Find("div[class=text fl]>a").Attr("href")
+						url, _ := s.Find("div[class=text fl]>a").Attr("href")
 
 						//输出格式
 						ctx.Output(map[int]interface{}{
