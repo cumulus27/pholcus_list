@@ -65,7 +65,7 @@ var FileTest = &Spider{
 						appSize := s.Find(".size").Text()
 						//下载量
 						longS := s.Find(".download").Text()
-						longS = longS[2 : end-1]
+						longS = longS[2 : len(longS)-1]
 						appDownload := strings.Trim(longS, " ")
 
 						//链接
