@@ -2,10 +2,10 @@ package pholcus_list
 
 // 基础包
 import (
-	"strings"
-	// "github.com/henrylee2cn/pholcus/common/goquery"                          //DOM解析
 	"github.com/henrylee2cn/pholcus/app/downloader/request" //必需
 	. "github.com/henrylee2cn/pholcus/app/spider"           //必需
+	"github.com/henrylee2cn/pholcus/common/goquery"         //DOM解析
+	"strings"
 
 	// . "github.com/henrylee2cn/pholcus/app/spider/common" //选用
 	// "github.com/henrylee2cn/pholcus/logs"
@@ -22,7 +22,6 @@ import (
 	// "math"
 	// "time"
 
-	"github.com/henrylee2cn/pholcus/common/goquery"
 )
 
 func init() {
